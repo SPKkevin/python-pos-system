@@ -2,20 +2,26 @@
 A desktop-based restaurant POS system built with Python.
 
 # How to Run
+```
 pip install -r requirements.txt
 uvicorn backend.api:app --reload
+```
 
 #API Endpoints
+```
 GET /health
 POST /orders
 GET /orders/{id}
 PATCH /orders/{id}/pay
+```
 
 #Tech Stack
+```
 Python
 FastAPI
 MySQL
 Tkinter
+```
 
 #Architecture
 UI → API → DB
