@@ -1,3 +1,6 @@
+# Restaurant POS System
+A desktop-based restaurant POS system built with Python.
+
 # How to Run
 pip install -r requirements.txt
 uvicorn backend.api:app --reload
@@ -16,9 +19,6 @@ Tkinter
 
 #Architecture
 UI → API → DB
-
-# Restaurant POS System
-A desktop-based restaurant POS system built with Python.
 
 ## Overview
 This project simulates a real restaurant POS workflow including order creation, item modification, checkout, and status control.  
