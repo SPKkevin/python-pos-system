@@ -1,45 +1,41 @@
-# Restaurant POS System
-A desktop-based restaurant POS system built with Python.
+# 餐飲 POS 訂單管理系統
+'''
+使用 Python FastAPI + MySQL + Vue 3 建立的 POS 系統，
+模擬餐廳點餐到結帳的完整流程。
+'''
+## 使用技術
+'''
+Python · FastAPI · RESTful API · MySQL · Transaction · Vue 3 · TypeScript
+'''
+## 系統架構
+'''
+Frontend (Vue) → FastAPI Backend → MySQL Database
+'''
+## How to Run
 
-# How to Run
-```
-pip install -r requirements.txt
-uvicorn backend.api:app --reload
-```
-
-#API Endpoints
-```
-GET /health
-POST /orders
-GET /orders/{id}
+1. 安裝後端套件
+'''
+pip install fastapi uvicorn mysql-connector-python pydantic
+'''
+2. 建立資料庫
+'''
+匯入
+database/SQL_file.sql
+'''
+3. 啟動後端
+'''
+uvicorn backend.API:app --reload
+'''
+4. 啟動前端
+'''
+cd frontend  
+npm install  
+npm run dev
+'''
+## API Endpoints
+'''
+GET /health  
+POST /orders  
+GET /orders/{id}  
 PATCH /orders/{id}/pay
-```
-
-#Tech Stack
-```
-Python
-FastAPI
-MySQL
-Tkinter
-```
-
-#Architecture
-UI → API → DB
-
-## Overview
-This project simulates a real restaurant POS workflow including order creation, item modification, checkout, and status control.  
-The system was later refactored to separate frontend and backend logic using FastAPI.
-
-
-## Core Features
-- Create new order
-- Add / remove items
-- Update quantity (+1 / -1)
-- Delete order item
-- Order status control (OPEN / PAID)
-- API-based CRUD operations
-- Database transaction to ensure data consistency
-
-## Database Structure
-- orders
-- order_items
+'''
