@@ -19,11 +19,11 @@ app.add_middleware(
 )
 
 DB_SETTING = {
-    "host": "db",
-    "port": 3306,
+    "host": "caboose.proxy.rlwy.net",
+    "port": 24890,
     "user": "root",
-    "password": "root",
-    "database": "pos"
+    "password": "jFAigKLFCgTtoiapbBeeNVeBkQsfNuhF",
+    "database": "railway",
 }
 # ---------- 需求資料格式（前端送進來的 JSON） ----------
 class OrderItemIn(BaseModel):
