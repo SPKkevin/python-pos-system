@@ -4,6 +4,8 @@ from pydantic import BaseModel
 import mysql.connector
 from datetime import datetime
 from typing import List
+import os
+import uvicorn
 '''
 cd C:/Users/a1137/OneDrive/桌面/示範程式/測試/backend
 uvicorn API:app --reload
@@ -399,4 +401,9 @@ def report_today_total():
     finally:
         conn.close()
 
-
+if __name__ == "__main__":
+    uvicorn.run(
+        "API:app",
+        host="0.0.0.0",
+        port=int(os.environ.get("PORT", 8000)),
+    )
