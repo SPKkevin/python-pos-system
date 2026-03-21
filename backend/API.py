@@ -393,7 +393,7 @@ def report_today_total():
         cur.execute("""
             SELECT COALESCE(SUM(total), 0)
             FROM orders
-            WHERE DATE(created_at) = CURDATE()
+            WHERE DATE(CONVERT_TZ(created_at, '+00:00', '+08:00')) = CURDATE()
             AND status = 'PAID'
         """)
         total = cur.fetchone()[0]
